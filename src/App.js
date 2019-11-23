@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -7,33 +6,36 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      string: 'Hello Sasha'
-    }
+      monsters:  [
+        {
+          name: 'Frankenstain',
+          id: 'dkd1'
+        },
+        {
+          name: 'Dracula',
+          id: 'dkd15'
+        },
+        {
+          name: 'Zombie',
+          id: 'dkd1kd'
+        }
+      ]
+    };
   }
 
-  toggleName () {
-    const newGreating = this.state.string === 'Hello Sasha' ? 'Hello Nata' : 'Hello Sasha';
-      return newGreating
+  componentDidMount( ) {
+    fetch ('https://jsonplaceholder.typicode.com/users').then(response => 
+    console.log(response)
+    );
   }
 
   render(){
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            {this.state.string}
-          </p>
-          <button onClick={() => this.setState({ string: this.toggleName() })}>Change Text</button>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {this.state.monsters.map( monster => (
+          <h1 key={monster.id}> {monster.name} </h1>
+        ))}
+        <button>click me</button>
       </div>
     );
   }
