@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CardList } from './components/card-list/card-list.component';
 import './App.css';
 
 class App extends Component {
@@ -6,36 +7,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      monsters:  [
-        {
-          name: 'Frankenstain',
-          id: 'dkd1'
-        },
-        {
-          name: 'Dracula',
-          id: 'dkd15'
-        },
-        {
-          name: 'Zombie',
-          id: 'dkd1kd'
-        }
-      ]
+      monsters:  []
     };
   }
 
   componentDidMount( ) {
-    fetch ('https://jsonplaceholder.typicode.com/users').then(response => 
-    console.log(response)
-    );
+    fetch ('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users => this.setState({ monsters: users }));
   }
 
   render(){
     return (
       <div className="App">
-        {this.state.monsters.map( monster => (
-          <h1 key={monster.id}> {monster.name} </h1>
-        ))}
-        <button>click me</button>
+        <CardList monsters={this.state.monsters} />
       </div>
     );
   }
