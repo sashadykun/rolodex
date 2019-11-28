@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/rolodex/static/css/main.e9861ecc.chunk.css",
+    "main.js": "/rolodex/static/js/main.cfd98edd.chunk.js",
+    "main.js.map": "/rolodex/static/js/main.cfd98edd.chunk.js.map",
+    "runtime-main.js": "/rolodex/static/js/runtime-main.5eadda35.js",
+    "runtime-main.js.map": "/rolodex/static/js/runtime-main.5eadda35.js.map",
+    "static/js/2.88369249.chunk.js": "/rolodex/static/js/2.88369249.chunk.js",
+    "static/js/2.88369249.chunk.js.map": "/rolodex/static/js/2.88369249.chunk.js.map",
+    "index.html": "/rolodex/index.html",
+    "precache-manifest.419c174ebe5cbd8c86ec556f984128c4.js": "/rolodex/precache-manifest.419c174ebe5cbd8c86ec556f984128c4.js",
+    "service-worker.js": "/rolodex/service-worker.js",
+    "static/css/main.e9861ecc.chunk.css.map": "/rolodex/static/css/main.e9861ecc.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5eadda35.js",
+    "static/js/2.88369249.chunk.js",
+    "static/css/main.e9861ecc.chunk.css",
+    "static/js/main.cfd98edd.chunk.js"
+  ]
+}
